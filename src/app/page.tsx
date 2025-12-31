@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <div className="max-w-2xl mx-auto px-6 py-20">
         {/* Header */}
         <header className="mb-16">
@@ -87,6 +89,30 @@ export default function Home() {
           </ul>
         </section>
       </div>
+
+      {/* Links pegados al borde inferior */}
+      <footer className="absolute bottom-0 left-0 right-0 py-6">
+        <div className="max-w-2xl mx-auto px-6 flex gap-6 flex-wrap items-center justify-start">
+          <Link
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm"
+            href="https://github.com/decker-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={16} />
+            GitHub
+          </Link>
+          <Link
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm"
+            href="https://x.com/0xDecker"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter size={16} />
+            X
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }
