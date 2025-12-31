@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { RootProvider } from "fumadocs-ui/provider/next";
 
 const fontMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -40,9 +41,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${fontMono.variable} font-mono antialiased`}>
-        {children}
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`${fontMono.variable} font-mono antialiased flex flex-col min-h-screen`}>
+        <RootProvider>{children}</RootProvider>
         <Analytics />
       </body>
     </html>
