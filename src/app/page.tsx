@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="text-xl font-bold mb-6">Decker Urbano</h1>
           <div className="text-muted-foreground leading-relaxed space-y-4">
             <p>
-              I'm a builder. I'm the CTO at{" "}
+              I'm a builder. I'm building{" "}
               <Link
                 href="https://commet.co"
                 target="_blank"
@@ -20,8 +20,8 @@ export default function Home() {
               >
                 Commet
               </Link>
-              , where we're building a modern billing and payments platform for SaaS and AI
-              companies. I've been coding for 10 years.
+              , a modern billing and payments platform for SaaS and AI companies. I've been coding
+              for 10 years.
             </p>
             <p>
               I'm an open source contributor and startup enthusiast. I love building tools that make
@@ -108,8 +108,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaXTwitter size={16} />
-            X
+            <FaXTwitter size={16} />X
           </Link>
         </div>
       </footer>
