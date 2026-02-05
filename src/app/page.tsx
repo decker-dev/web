@@ -36,6 +36,19 @@ export default function Home() {
           <ul className="space-y-4">
             <li>
               <Link
+                href="https://billsdk.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="flex items-baseline gap-3">
+                  <span className="text-white group-hover:underline">bill/sdk</span>
+                  <span className="text-muted-foreground text-sm">Billing SDK</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="https://billui.com/"
                 target="_blank"
                 rel="noopener noreferrer"
